@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr); /* 1 cột cho tiết, 5 cột cho thứ */
+      gap: 1px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #ccc;
+    }
+
+    .grid-cell {
+      background-color: white;
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    .header {
+      background-color: #2b909b;
+      color: white;
+      font-weight: bold;
+    }
+
+    .row:nth-child(even) .grid-cell:not(.header):not(.time-label) {
+      background-color: #e8ef5b;
+    }
+
+    .grid-cell:hover:not(.header):not(.time-label) {
+      background-color: #dff9fb;
+      cursor: pointer;
+    }
+
+    .time-label {
+      font-weight: bold;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Thời khóa biểu </h2>
+
+  <div class="schedule-grid">
+    <!-- Header -->
+    <div class="grid-cell header">Tiết / Thứ</div>
+    <div class="grid-cell header">Thứ 2</div>
+    <div class="grid-cell header">Thứ 3</div>
+    <div class="grid-cell header">Thứ 4</div>
+    <div class="grid-cell header">Thứ 5</div>
+    <div class="grid-cell header">Thứ 6</div>
+
+    <!-- Tiết 1 -->
+    <div class="grid-cell time-label">Tiết 1</div>
+    <div class="grid-cell">Toán</div>
+    <div class="grid-cell">Văn</div>
+    <div class="grid-cell">Hóa</div>
+    <div class="grid-cell">Lý</div>
+    <div class="grid-cell">Toán</div>
+
+    <!-- Tiết 2 -->
+    <div class="grid-cell time-label">Tiết 2</div>
+    <div class="grid-cell">Văn</div>
+    <div class="grid-cell">Toán</div>
+    <div class="grid-cell">Sinh</div>
+    <div class="grid-cell">Văn</div>
+    <div class="grid-cell">Tiếng Anh</div>
+
+    <!-- Tiết 3 -->
+    <div class="grid-cell time-label">Tiết 3</div>
+    <div class="grid-cell">Tiếng Anh</div>
+    <div class="grid-cell">Lý</div>
+    <div class="grid-cell">Toán</div>
+    <div class="grid-cell">Hóa</div>
+    <div class="grid-cell">Thể dục</div>
+
+    <!-- Tiết 4 -->
+    <div class="grid-cell time-label">Tiết 4</div>
+    <div class="grid-cell">Sinh</div>
+    <div class="grid-cell">Sử</div>
+    <div class="grid-cell">Địa</div>
+    <div class="grid-cell">GDCD</div>
+    <div class="grid-cell">Công nghệ</div>
+  </div>
+
+</body>
+</html>
